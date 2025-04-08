@@ -9,17 +9,10 @@ import imaplib
 from gtts import gTTS
 import pyglet
 import os , time
-
-# pyglet.lib.load_library('avbin')
-# pyglet.have_avbin=True
-
-# project: :. Project: Voice based Email for blind :.
-# Author: Sayak Naskar
-
 # fetch project name
 tts = gTTS(text="Project: Voice based Email for blind", lang='en')
 ttsname = (
-    "name.mp3")  # Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    "name.mp3")  # Example: path -> C:\Users\alex\Desktop> just change with your desktop directory. Don't use my directory.
 tts.save(ttsname)
 
 music = pyglet.media.load(ttsname, streaming=False)
@@ -36,7 +29,7 @@ print("You are logging from : " + login())
 print("1. composed a mail.")
 tts = gTTS(text="option 1. composed a mail.", lang='en')
 ttsname = (
-    "hello.mp3")  # Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    "hello.mp3")  # Example: path -> C:\Users\alex\Desktop> just change with your desktop directory. Don't use my directory.
 tts.save(ttsname)
 
 music = pyglet.media.load(ttsname, streaming=False)
@@ -59,7 +52,7 @@ os.remove(ttsname)
 # this is for input choices
 tts = gTTS(text="Your choice ", lang='en')
 ttsname = (
-    "hello.mp3")  # Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    "hello.mp3")  # Example: path -> C:\Users\alex\Desktop> just change with your desktop directory. Don't use my directory.
 tts.save(ttsname)
 
 music = pyglet.media.load(ttsname, streaming=False)
@@ -109,7 +102,7 @@ if text == '1' or text == 'One' or text == 'one':
     print("Congrates! Your mail has send. ")
     tts = gTTS(text="Congrates! Your mail has send. ", lang='en')
     ttsname = (
-        "send.mp3")  # Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        "send.mp3")  # Example: path -> C:\Users\alex\Desktop> just change with your desktop directory. Don't use my directory.
     tts.save(ttsname)
     music = pyglet.media.load(ttsname, streaming=False)
     music.play()
@@ -126,7 +119,7 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     print("Number of mails in your inbox :" + str(total))
     tts = gTTS(text="Total mails are :" + str(total), lang='en')  # voice out
     ttsname = (
-        "total.mp3")  # Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        "total.mp3")  # Example: path -> C:\Users\alex\Desktop> just change with your desktop directory. Don't use my directory.
     tts.save(ttsname)
     music = pyglet.media.load(ttsname, streaming=False)
     music.play()
@@ -138,7 +131,7 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     print("Number of UnSeen mails :" + str(unseen))
     tts = gTTS(text="Your Unseen mail :" + str(unseen), lang='en')
     ttsname = (
-        "unseen.mp3")  # Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        "unseen.mp3")  # Example: path -> C:\Users\alex\Desktop> just change with your desktop directory. Don't use my directory.
     tts.save(ttsname)
     music = pyglet.media.load(ttsname, streaming=False)
     music.play()
@@ -157,7 +150,7 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     print("Subject: " + str(email_message['Subject']))
     tts = gTTS(text="From: " + email_message['From'] + " And Your subject: " + str(email_message['Subject']), lang='en')
     ttsname = (
-        "mail.mp3")  # Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        "mail.mp3")  # Example: path -> C:\Users\alex\Desktop> just change with your desktop directory. Don't use my directory.
     tts.save(ttsname)
     music = pyglet.media.load(ttsname, streaming=False)
     music.play()
@@ -173,7 +166,7 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     print("Body :" + txt)
     tts = gTTS(text="Body: " + txt, lang='en')
     ttsname = (
-        "body.mp3")  # Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        "body.mp3")  # Example: path -> C:\Users\alex\Desktop> just change with your desktop directory. Don't use my directory.
     tts.save(ttsname)
     music = pyglet.media.load(ttsname, streaming=False)
     music.play()
